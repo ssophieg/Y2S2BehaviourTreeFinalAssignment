@@ -46,7 +46,7 @@ public class TakeDamage : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    private void ReceiveDamage()
     {
         //red flash to indicate damage
         flashing = true;

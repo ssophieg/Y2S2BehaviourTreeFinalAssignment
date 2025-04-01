@@ -5,20 +5,13 @@ using UnityEngine;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class TeleportAT : ActionTask {
+	public class AttackAT : ActionTask {
 
-		public GameObject visibleModel;
-		public Vector3 teleportTargetLocation;
-		float teleportTimer = 0;
-		public float teleportTime;
-
-
-		public ParticleSystem poofVisual;
+		public GameObject target;
 
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
 		protected override string OnInit() {
-			poofVisual = agent.GetComponent<ParticleSystem>();
 			return null;
 		}
 
@@ -26,28 +19,13 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-
-			//emit poof particles
-			poofVisual.Emit(10);
-			visibleModel.SetActive(false);
 			//EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			teleportTimer += Time.deltaTime;
-
-			if(teleportTimer >= teleportTime)
-			{
-				agent.transform.position = teleportTargetLocation;
-				teleportTimer = 0;
-
-                //emit poof particles
-                poofVisual.Emit(10);
-                visibleModel.SetActive(true);
-				EndAction(true);
-			}
-		}
+            target.GetComponent<TakeDamage>().BroadcastMessage("ReceiveDamage");
+        }
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
