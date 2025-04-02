@@ -6,11 +6,8 @@ using UnityEngine.AI;
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class ApproachAT : ActionTask {
+	public class StopMovementAT : ActionTask {
 
-		public Transform target;
-
-		public BBParameter<float> defaultSpeed;
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
 		protected override string OnInit() {
@@ -21,9 +18,8 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			agent.GetComponent<NavMeshAgent>().SetDestination(target.position);
-			agent.GetComponent<NavMeshAgent>().speed = defaultSpeed.value;
-            EndAction(true);
+			agent.GetComponent<NavMeshAgent>().speed = 0;
+			EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
