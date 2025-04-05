@@ -7,7 +7,7 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class InRangeCT : ConditionTask {
 
-		public Transform target;
+		public BBParameter<Transform> target;
 		public float detectionRange;
 
 		//Use for initialization. This is called only once in the lifetime of the task.
@@ -29,7 +29,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-			if (Vector3.Distance(agent.transform.position, target.position) <= detectionRange)
+			if (Vector3.Distance(agent.transform.position, target.value.position) <= detectionRange)
 			{
                 return true;
             }

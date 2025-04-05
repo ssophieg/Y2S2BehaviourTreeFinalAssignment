@@ -7,7 +7,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class AttackAT : ActionTask {
 
-		public GameObject target;
+		public BBParameter<GameObject> target;
 
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
@@ -19,7 +19,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-            target.GetComponent<TakeDamage>().BroadcastMessage("ReceiveDamage");
+            target.value.GetComponent<TakeDamage>().BroadcastMessage("ReceiveDamage");
             EndAction(true);
         }
 

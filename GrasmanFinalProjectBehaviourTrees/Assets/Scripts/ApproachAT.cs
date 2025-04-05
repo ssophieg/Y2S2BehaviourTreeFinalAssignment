@@ -8,7 +8,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class ApproachAT : ActionTask {
 
-		public Transform target;
+		public BBParameter<Transform> target;
 
 		public BBParameter<float> defaultSpeed;
 		//Use for initialization. This is called only once in the lifetime of the task.
@@ -22,7 +22,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
             agent.GetComponent<NavMeshAgent>().enabled = true;
-            agent.GetComponent<NavMeshAgent>().SetDestination(target.position);
+            agent.GetComponent<NavMeshAgent>().SetDestination(target.value.position);
 			agent.GetComponent<NavMeshAgent>().speed = defaultSpeed.value;
          
 		}
