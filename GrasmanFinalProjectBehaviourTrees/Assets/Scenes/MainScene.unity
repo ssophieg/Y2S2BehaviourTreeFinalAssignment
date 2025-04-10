@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 493833931}
   - component: {fileID: 493833930}
   - component: {fileID: 493833929}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Frontliner 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 783744488}
   - component: {fileID: 783744487}
   - component: {fileID: 783744486}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Frontliner 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -673,6 +673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 7489536128058391139, guid: 72f7f92a13d44be4897bec951abe30e5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -832,6 +836,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 7489536128058391139, guid: 72f7f92a13d44be4897bec951abe30e5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -984,6 +992,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1697213822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1697213823}
+  m_Layer: 0
+  m_Name: LeftSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1697213823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697213822}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5.45}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1830523109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1830523107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1830523109}
+  - component: {fileID: 1830523108}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1830523108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830523107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2031c45c31af8de47bd497aa2b29cb20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ninjaOpponent: {fileID: 3376395121240308981, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
+  mageOpponent: {fileID: 801198659433717439, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
+  spawnpointLeft: {fileID: 1697213823}
+  spawnpointRight: {fileID: 2077628804}
+--- !u!4 &1830523109
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830523107}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 24.75, y: -1.309, z: -5.2200003}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1697213823}
+  - {fileID: 2077628804}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1863200079
 GameObject:
   m_ObjectHideFlags: 0
@@ -998,7 +1087,7 @@ GameObject:
   - component: {fileID: 1863200082}
   - component: {fileID: 1863200081}
   - component: {fileID: 1863200080}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Frontliner 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,6 +1275,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 7489536128058391139, guid: 72f7f92a13d44be4897bec951abe30e5, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1351,6 +1444,37 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 10
   m_CollisionDetection: 0
+--- !u!1 &2077628803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2077628804}
+  m_Layer: 0
+  m_Name: RightSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2077628804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077628803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -6.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1830523109}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2571878002703602302
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1374,6 +1498,10 @@ PrefabInstance:
     - target: {fileID: 3376395121240308981, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_Name
       value: Ninja Opponent
+      objectReference: {fileID: 0}
+    - target: {fileID: 3376395121240308981, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7229150650127265056, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1432,6 +1560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mage Opponent
       objectReference: {fileID: 0}
+    - target: {fileID: 801198659433717439, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6506346311885145051, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
       propertyPath: m_LocalPosition.x
       value: 24.75
@@ -1442,7 +1574,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6506346311885145051, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.95
+      value: -10.62
       objectReference: {fileID: 0}
     - target: {fileID: 6506346311885145051, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1472,33 +1604,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9070716079875598097, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
-      propertyPath: _serializedBlackboard
-      value: '{"_variables":{"DefaultSpeed":{"_value":3.5,"_name":"DefaultSpeed","_id":"694be861-3ab9-40fe-b8e1-913f91e2b18a","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FrontlineTarget":{"_value":1,"_name":"FrontlineTarget","_id":"20002d41-18fa-44d6-b57f-79b972cd0880","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070716079875598097, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
-      propertyPath: _objectReferences.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070716079875598097, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
-      propertyPath: _objectReferences.Array.data[1]
-      value: 
-      objectReference: {fileID: 783744484}
-    - target: {fileID: 9070716079875598097, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
-      propertyPath: _serializedVariables.Array.data[1]._json
-      value: '{"_value":1,"_name":"FrontlineTarget","_id":"20002d41-18fa-44d6-b57f-79b972cd0880","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
-        UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070716079875598097, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
-      propertyPath: _serializedVariables.Array.data[1]._references.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9070716079875598097, guid: 937f3fbcd21f9c14a861a1278cbaf658, type: 3}
-      propertyPath: _serializedVariables.Array.data[1]._references.Array.data[1]
-      value: 
-      objectReference: {fileID: 783744484}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1517,3 +1622,4 @@ SceneRoots:
   - {fileID: 2571878002703602302}
   - {fileID: 8040298567470621100}
   - {fileID: 1653838868}
+  - {fileID: 1830523109}
