@@ -17,6 +17,8 @@ public class HealingCooldown : MonoBehaviour
     public GameObject gameOverText;
     public GameObject restartButton;
 
+    public ScoreUI scoreUI;
+
     public TakeDamage frontliner1;
     public TakeDamage frontliner2;
     public TakeDamage frontliner3;
@@ -45,6 +47,7 @@ public class HealingCooldown : MonoBehaviour
         {
             gameOverText.SetActive(true);
             restartButton.SetActive(true);
+            scoreUI.timerRun = false;
 
             if (dealDamageAmount < 12)
             {
