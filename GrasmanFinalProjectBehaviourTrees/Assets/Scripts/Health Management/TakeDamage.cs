@@ -14,7 +14,7 @@ public class TakeDamage : MonoBehaviour
     float flashTimer;
     bool flashing = false;
 
-    bool alive = true;
+    public bool alive = true;
 
     bool deathAnim = false;
 

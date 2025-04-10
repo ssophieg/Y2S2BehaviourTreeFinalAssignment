@@ -44,6 +44,12 @@ public class Heal : MonoBehaviour
             gameObject.GetComponent<MeshRenderer>().material = greenColour;
 
             healthBar.transform.localScale += new Vector3(0, 0, 0.3f);
+
+            if (healthBar.transform.localScale.z > 0.3)
+            {
+                healthBar.GetComponent<MeshRenderer>().material = greenColour;
+            }
+
             cooldownScript.cooldownTimer = 5;
         }
     }

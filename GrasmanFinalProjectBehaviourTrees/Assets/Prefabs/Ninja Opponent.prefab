@@ -119,7 +119,7 @@ MonoBehaviour:
     _version: 3.31
     _category: 
     _comments: 
-    _translation: {x: 78, y: 60}
+    _translation: {x: 57, y: 14}
     _zoomFactor: 0.4428834
   _firstActivation: 0
   _enableAction: 0
@@ -5013,7 +5013,8 @@ GameObject:
   - component: {fileID: 3098512466133528082}
   - component: {fileID: 3970341114528516126}
   - component: {fileID: 4271807052457430215}
-  m_Layer: 7
+  - component: {fileID: 563578321135998447}
+  m_Layer: 8
   m_Name: Ninja Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5121,6 +5122,7 @@ MonoBehaviour:
   healthBar: {fileID: 4345543935786254309}
   redColour: {fileID: 2100000, guid: 67d9edeb6c5a48f499e3af7a608c29e0, type: 2}
   defaultColour: {fileID: 2100000, guid: e0378abf11e41fe408bb4a87b6e6d943, type: 2}
+  alive: 1
   takeDamageOnClick: 1
 --- !u!54 &4271807052457430215
 Rigidbody:
@@ -5149,6 +5151,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &563578321135998447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815164346252884975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5f206e8b52f1b048867aede423bf1a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 4345543935786254309}
+  greenColour: {fileID: 2100000, guid: b40f00889485fda4caa37ffe80ebb173, type: 2}
+  defaultColour: {fileID: 2100000, guid: e0378abf11e41fe408bb4a87b6e6d943, type: 2}
 --- !u!1001 &6610813948780053894
 PrefabInstance:
   m_ObjectHideFlags: 0

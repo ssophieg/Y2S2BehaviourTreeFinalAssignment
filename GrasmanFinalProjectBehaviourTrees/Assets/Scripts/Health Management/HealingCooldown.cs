@@ -14,6 +14,14 @@ public class HealingCooldown : MonoBehaviour
     public Slider cooldownUI;
 
     public GameObject readyText;
+    public GameObject gameOverText;
+
+    public TakeDamage frontliner1;
+    public TakeDamage frontliner2;
+    public TakeDamage frontliner3;
+    public TakeDamage player;
+
+    float dealDamageAmount = 0;
 
     // Update is called once per frame
     void Update()
@@ -31,5 +39,20 @@ public class HealingCooldown : MonoBehaviour
         }
 
         cooldownUI.value = cooldownTimer;
+
+        if (player.alive == false || frontliner1.alive == false || frontliner2.alive == false || frontliner3.alive == false)
+        {
+            gameOverText.SetActive(true);
+
+            if (dealDamageAmount < 12)
+            {
+                player.SendMessage("ReceiveDamage");
+                frontliner1.SendMessage("ReceiveDamage");
+                frontliner2.SendMessage("ReceiveDamage");
+                frontliner3.SendMessage("ReceiveDamage");
+
+                dealDamageAmount += 1;
+            }
+        }
     }
 }
