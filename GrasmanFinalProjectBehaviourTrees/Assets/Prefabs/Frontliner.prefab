@@ -126,6 +126,7 @@ MonoBehaviour:
   healthBar: {fileID: 8400559632427438308}
   redColour: {fileID: 2100000, guid: 67d9edeb6c5a48f499e3af7a608c29e0, type: 2}
   defaultColour: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  takeDamageOnClick: 0
 --- !u!54 &2788860995902381749
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -218,6 +219,7 @@ MonoBehaviour:
   healthBar: {fileID: 8400559632427438308}
   greenColour: {fileID: 2100000, guid: b40f00889485fda4caa37ffe80ebb173, type: 2}
   defaultColour: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  healOnClick: 1
 --- !u!1001 &1397493671742220935
 PrefabInstance:
   m_ObjectHideFlags: 0

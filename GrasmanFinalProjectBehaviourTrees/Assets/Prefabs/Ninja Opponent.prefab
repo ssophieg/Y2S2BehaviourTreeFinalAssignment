@@ -5012,6 +5012,7 @@ GameObject:
   - component: {fileID: 6623539455696585186}
   - component: {fileID: 3098512466133528082}
   - component: {fileID: 3970341114528516126}
+  - component: {fileID: 4271807052457430215}
   m_Layer: 7
   m_Name: Ninja Model
   m_TagString: Untagged
@@ -5103,8 +5104,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.101152, y: 1.0581188, z: 1.0718352}
+  m_Center: {x: -0.010418893, y: 0.02905941, z: -0.008659303}
 --- !u!114 &3970341114528516126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5120,6 +5121,34 @@ MonoBehaviour:
   healthBar: {fileID: 4345543935786254309}
   redColour: {fileID: 2100000, guid: 67d9edeb6c5a48f499e3af7a608c29e0, type: 2}
   defaultColour: {fileID: 2100000, guid: e0378abf11e41fe408bb4a87b6e6d943, type: 2}
+  takeDamageOnClick: 1
+--- !u!54 &4271807052457430215
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4815164346252884975}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &6610813948780053894
 PrefabInstance:
   m_ObjectHideFlags: 0

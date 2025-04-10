@@ -13,6 +13,7 @@ public class Heal : MonoBehaviour
     float flashTimer;
     bool flashing = false;
 
+    public bool healOnClick;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,15 +36,22 @@ public class Heal : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
+    private void HealDamage()
     {
-        if (cooldownScript.cooldownTimer <=0) 
+        if (cooldownScript.cooldownTimer <= 0)
         {
             flashing = true;
             gameObject.GetComponent<MeshRenderer>().material = greenColour;
 
             healthBar.transform.localScale += new Vector3(0, 0, 0.3f);
             cooldownScript.cooldownTimer = 5;
+        }
+    }
+    private void OnMouseDown()
+    {
+        if (healOnClick)
+        {
+            HealDamage();
         }
     }
 }

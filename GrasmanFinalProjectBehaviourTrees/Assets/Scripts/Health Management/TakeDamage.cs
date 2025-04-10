@@ -17,6 +17,8 @@ public class TakeDamage : MonoBehaviour
     bool alive = true;
 
     bool deathAnim = false;
+
+    public bool takeDamageOnClick;
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +75,14 @@ public class TakeDamage : MonoBehaviour
         {
             alive = false;
             deathAnim = true;
+        }
+    }
+
+    private void OnMouseDown()
+    {
+        if (takeDamageOnClick)
+        {
+            ReceiveDamage();
         }
     }
 }
