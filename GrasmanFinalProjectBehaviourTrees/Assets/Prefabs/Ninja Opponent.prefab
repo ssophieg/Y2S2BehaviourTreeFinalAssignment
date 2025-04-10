@@ -5062,7 +5062,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e0378abf11e41fe408bb4a87b6e6d943, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5119,7 +5119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 4345543935786254309}
   redColour: {fileID: 2100000, guid: 67d9edeb6c5a48f499e3af7a608c29e0, type: 2}
-  defaultColour: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  defaultColour: {fileID: 2100000, guid: e0378abf11e41fe408bb4a87b6e6d943, type: 2}
 --- !u!1001 &6610813948780053894
 PrefabInstance:
   m_ObjectHideFlags: 0

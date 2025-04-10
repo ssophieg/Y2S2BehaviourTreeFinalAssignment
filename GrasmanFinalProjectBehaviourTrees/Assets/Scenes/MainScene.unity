@@ -227,6 +227,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2039038830}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &373083029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373083030}
+  - component: {fileID: 373083031}
+  m_Layer: 0
+  m_Name: UI Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &373083030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373083029}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.317635, y: -8.825337, z: -6.8729177}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &373083031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373083029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c000a11fb89a214299e007b09895e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownTimer: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +471,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1017974998440349060, guid: e9bf057ba4064ac43866893d318115f6, type: 3}
+      propertyPath: cooldownScript
+      value: 
+      objectReference: {fileID: 373083031}
     - target: {fileID: 4770177320993211408, guid: e9bf057ba4064ac43866893d318115f6, type: 3}
       propertyPath: m_Name
       value: Frontliner (2)
@@ -651,6 +700,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1017974998440349060, guid: e9bf057ba4064ac43866893d318115f6, type: 3}
+      propertyPath: cooldownScript
+      value: 
+      objectReference: {fileID: 373083031}
     - target: {fileID: 4770177320993211408, guid: e9bf057ba4064ac43866893d318115f6, type: 3}
       propertyPath: m_Name
       value: Frontliner (1)
@@ -764,6 +817,7 @@ GameObject:
   - component: {fileID: 2039038827}
   - component: {fileID: 2039038831}
   - component: {fileID: 2039038834}
+  - component: {fileID: 2039038835}
   m_Layer: 6
   m_Name: Player Character
   m_TagString: Untagged
@@ -900,6 +954,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 10
   m_CollisionDetection: 0
+--- !u!114 &2039038835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039038826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35ae0951b1b44a4196f4d9fc40a3300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldownScript: {fileID: 373083031}
+  healthBar: {fileID: 4158044}
+  greenColour: {fileID: 2100000, guid: b40f00889485fda4caa37ffe80ebb173, type: 2}
+  defaultColour: {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &2077628803
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +1009,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1017974998440349060, guid: e9bf057ba4064ac43866893d318115f6, type: 3}
+      propertyPath: cooldownScript
+      value: 
+      objectReference: {fileID: 373083031}
     - target: {fileID: 4770177320993211408, guid: e9bf057ba4064ac43866893d318115f6, type: 3}
       propertyPath: m_Name
       value: Frontliner
@@ -1140,3 +1214,4 @@ SceneRoots:
   - {fileID: 8040298567470621100}
   - {fileID: 1653838868}
   - {fileID: 1830523109}
+  - {fileID: 373083030}
