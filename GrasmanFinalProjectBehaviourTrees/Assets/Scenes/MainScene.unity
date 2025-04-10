@@ -1308,7 +1308,7 @@ GameObject:
   - component: {fileID: 2039038827}
   - component: {fileID: 2039038831}
   - component: {fileID: 2039038834}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1484,17 +1484,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3022307635836959611, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
+      propertyPath: _boundGraphSource._zoomFactor
+      value: 0.61323696
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022307635836959611, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
+      propertyPath: _boundGraphSource._translation.x
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022307635836959611, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
+      propertyPath: _boundGraphSource._translation.y
+      value: -61
+      objectReference: {fileID: 0}
+    - target: {fileID: 3022307635836959611, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: _boundGraphObjectReferences.Array.data[1]
       value: 
       objectReference: {fileID: 783744485}
-    - target: {fileID: 3022307635836959611, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
-      propertyPath: _boundGraphObjectReferences.Array.data[4]
-      value: 
-      objectReference: {fileID: 2039038830}
-    - target: {fileID: 3022307635836959611, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
-      propertyPath: _boundGraphObjectReferences.Array.data[5]
-      value: 
-      objectReference: {fileID: 2039038826}
     - target: {fileID: 3376395121240308981, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_Name
       value: Ninja Opponent
@@ -1517,19 +1521,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229150650127265056, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.706663
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7229150650127265056, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7229150650127265056, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7075503
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7229150650127265056, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7229150650127265056, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1537,7 +1541,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7229150650127265056, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90.072
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 7229150650127265056, guid: 3b053c9d01407924db7b847aac9ca322, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

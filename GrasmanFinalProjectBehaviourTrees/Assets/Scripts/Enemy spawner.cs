@@ -17,7 +17,8 @@ public class Enemyspawner : MonoBehaviour
     Vector3 RightVector;
     Vector3 CenterVector;
 
-    float timer = 0;
+    float mageSpawnTimer = 0;
+    float ninjaSpawnTimer = 0;
 
     float currentTransform = 1;
 
@@ -34,9 +35,10 @@ public class Enemyspawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer += Time.deltaTime;
+        mageSpawnTimer += Time.deltaTime;
+        ninjaSpawnTimer += Time.deltaTime;
 
-        if (timer >= 10)
+        if (mageSpawnTimer >= 10)
         {
             switch (currentTransform) 
             {
@@ -53,12 +55,18 @@ public class Enemyspawner : MonoBehaviour
                     currentTransform += 1;
                     break;
             }
-            timer = 0;
+            mageSpawnTimer = 0;
         }
 
         if (currentTransform > 3)
         {
             currentTransform = 1;
+        }
+
+        if (ninjaSpawnTimer > 25)
+        {
+            Instantiate(ninjaOpponent, CenterVector + new Vector3 (10, 0, 0), Quaternion.Euler(0, -90, 0));
+            ninjaSpawnTimer = 0;
         }
     }
 }
