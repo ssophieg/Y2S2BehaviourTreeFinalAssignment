@@ -1,3 +1,5 @@
+using NodeCanvas.BehaviourTrees;
+using NodeCanvas.Framework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,6 +44,10 @@ public class TakeDamage : MonoBehaviour
             if (gameObject.transform.localScale.x <= 0)
             {
                 deathAnim = false;
+
+                Destroy(healthBar);
+                GetComponentInParent<BehaviourTreeOwner>().gameObject.SetActive(false);
+                Destroy(gameObject);
             }
         }
     }

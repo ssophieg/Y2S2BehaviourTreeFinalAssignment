@@ -7,11 +7,11 @@ namespace NodeCanvas.Tasks.Conditions {
 
 	public class DetectCT : ConditionTask {
 
-		public BBParameter<GameObject> frontlineTarget;
+		public BBParameter<GameObject> Target;
 
 		public float searchRadius;
 
-		public LayerMask frontlinersLayer;
+		public LayerMask detectLayer;
 
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
@@ -33,12 +33,12 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
 
-            Collider[] frontliners = Physics.OverlapSphere(agent.transform.position, searchRadius, frontlinersLayer);
+            Collider[] frontliners = Physics.OverlapSphere(agent.transform.position, searchRadius, detectLayer);
 
             //store rodent location and object when rodent is found
-            foreach (Collider frontlineCollider in frontliners)
+            foreach (Collider targetCollider in frontliners)
             {
-                frontlineTarget.value = frontlineCollider.gameObject;
+                Target.value = targetCollider.gameObject;
             }
 
             //end action when rodent is found
