@@ -19,6 +19,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+			//Heal target
 			target.value.GetComponent<NinjaHeal>().SendMessage("HealDamage");
 			EndAction(true);
         }

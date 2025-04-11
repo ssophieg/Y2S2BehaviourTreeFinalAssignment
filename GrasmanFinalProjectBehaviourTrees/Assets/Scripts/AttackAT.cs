@@ -19,23 +19,9 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+			//Deal damage to target
             target.value.GetComponent<TakeDamage>().BroadcastMessage("ReceiveDamage");
             EndAction(true);
         }
-
-		//Called once per frame while the action is active.
-		protected override void OnUpdate() {
-           
-        }
-
-		//Called when the task is disabled.
-		protected override void OnStop() {
-			
-		}
-
-		//Called when the task is paused.
-		protected override void OnPause() {
-			
-		}
 	}
 }

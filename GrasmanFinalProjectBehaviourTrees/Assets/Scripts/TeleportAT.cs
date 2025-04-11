@@ -29,34 +29,29 @@ namespace NodeCanvas.Tasks.Actions {
 
 			//emit poof particles
 			poofVisual.Emit(10);
+			//become invisible during teleport
 			visibleModel.SetActive(false);
-			//EndAction(true);
 		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
+			//start timer for amount of time teleport takes
 			teleportTimer += Time.deltaTime;
 
 			if(teleportTimer >= teleportTime)
 			{
+				//change location
 				agent.transform.position = teleportTargetLocation;
+				//reset timer
 				teleportTimer = 0;
 
                 //emit poof particles
                 poofVisual.Emit(10);
+
+				//become visible in new location
                 visibleModel.SetActive(true);
 				EndAction(true);
 			}
-		}
-
-		//Called when the task is disabled.
-		protected override void OnStop() {
-			
-		}
-
-		//Called when the task is paused.
-		protected override void OnPause() {
-			
 		}
 	}
 }

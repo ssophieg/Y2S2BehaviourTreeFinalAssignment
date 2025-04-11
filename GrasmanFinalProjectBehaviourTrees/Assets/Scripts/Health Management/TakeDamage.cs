@@ -16,8 +16,10 @@ public class TakeDamage : MonoBehaviour
 
     public bool alive = true;
 
+    //is the death animation playing?
     bool deathAnim = false;
 
+    //does this character take damage when clicked? (use for ninja characters)
     public bool takeDamageOnClick;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,7 @@ public class TakeDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Flash character red upon taking damage
         if (flashing)
         {
             flashTimer += Time.deltaTime;
@@ -40,6 +43,7 @@ public class TakeDamage : MonoBehaviour
             flashTimer = 0;
         }
 
+        //if character dies, shrink model and then destroy gameobject
         if (alive == false && deathAnim == true)
         {
             gameObject.transform.localScale -= new Vector3(Time.deltaTime, Time.deltaTime, Time.deltaTime);
@@ -66,11 +70,13 @@ public class TakeDamage : MonoBehaviour
             healthBar.transform.localScale -= new Vector3(0, 0, 0.1f);
         }
 
+        //turn health bar red when health is low
         if (healthBar.transform.localScale.z <= 0.3)
         {
             healthBar.GetComponent<MeshRenderer>().material = redColour;
         }
 
+        //if health is 0, character is dead
         if (healthBar.transform.localScale.z <= 0)
         {
             alive = false;

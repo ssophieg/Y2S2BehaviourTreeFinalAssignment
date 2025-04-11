@@ -21,6 +21,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+			//set destination of navmesh to approach the target
             agent.GetComponent<NavMeshAgent>().enabled = true;
             agent.GetComponent<NavMeshAgent>().SetDestination(target.value.position);
 			agent.GetComponent<NavMeshAgent>().speed = defaultSpeed.value;

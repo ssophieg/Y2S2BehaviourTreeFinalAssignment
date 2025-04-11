@@ -19,29 +19,20 @@ namespace NodeCanvas.Tasks.Conditions {
 			return null;
 		}
 
-		//Called whenever the condition gets enabled.
-		protected override void OnEnable() {
-			
-		}
-
-		//Called whenever the condition gets disabled.
-		protected override void OnDisable() {
-			
-		}
-
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
 
+			//detect anything in the detectLayer with overlap sphere
             Collider[] frontliners = Physics.OverlapSphere(agent.transform.position, searchRadius, detectLayer);
 
-            //store rodent location and object when rodent is found
             foreach (Collider targetCollider in frontliners)
             {
+				//set the target to detected object
                 Target.value = targetCollider.gameObject;
             }
 
-            //end action when rodent is found
+            //end action when object is found
             if (frontliners.Length > 0)
             {
                 return true;
